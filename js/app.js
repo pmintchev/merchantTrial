@@ -1,9 +1,17 @@
 $(document).foundation();
 $(document).ready(function() {
-	var bounceText = $(".dialogue:eq(0)");
+	//bounce the first text box
+	var bounceObject = $(".dialogue:eq(0)");
 	$(".chat-profile").click(function(){
-		bounceIt(bounceText);
-	})
+		bounceIt(bounceObject);
+	});
+	//pop the avatar on load
+	setTimeout(function(){
+		$(".chat-profile").css({"visibility":"visible"})
+		var popObject = $(".chat-profile");
+		popIt (popObject);
+	},1500);
+	
 }
 );
 
@@ -14,3 +22,12 @@ function bounceIt (bounceElement) {
 		$(".bounce").removeClass("bounce");
 	},500);
 }
+
+function popIt (popElement) {
+	$(popElement).addClass("pop");
+	setTimeout(function(){
+		$(".pop").removeClass("pop");
+	},500);
+}
+
+
