@@ -64,7 +64,6 @@
 
 // 1. Global
 // ---------
-
 $global-font-size: 100%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
@@ -94,9 +93,10 @@ $global-menu-padding: 0.7rem 1rem;
 $global-menu-nested-margin: 1rem;
 $global-text-direction: ltr;
 $global-flexbox: true;
-$global-prototype-breakpoints: false;
+$global-prototype-breakpoints: true;
 $global-color-pick-contrast-tolerance: 0;
 $print-transparent-backgrounds: true;
+
 
 @include add-foundation-colors;
 

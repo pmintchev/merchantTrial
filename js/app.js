@@ -1,32 +1,36 @@
 $(document).foundation();
 $(document).ready(function() {
-	//bounce the first text box
-	var bounceObject = $(".dialogue:eq(0)");
-	$(".chat-profile").click(function(){
-		bounceIt(bounceObject);
-	});
-	//pop the avatar on load
+	//pop the avatar
 	setTimeout(function(){
-		$(".chat-profile").css({"visibility":"visible"})
-		var popObject = $(".chat-profile");
-		popIt (popObject);
-	},1500);
+		$(".appear-1").css({"visibility":"visible"})
+		var popObject = $(".appear-1");
+		bounceIt (popObject);
+	},300);
+
+	//change avatar to aniumated gif
+    setTimeout(function(){
+		$(".chat-profile").attr("src","images/smile.gif");
+	},1000);
+	
+	//pop the text
+	setTimeout(function(){
+		$(".appear-2").css({"visibility":"visible"})
+		var popObject = $(".appear-2");
+		bounceIt (popObject);
+	},500);
 	
 }
 );
 
 //functions
+
+
+
+
 function bounceIt (bounceElement) {
 	$(bounceElement).addClass("bounce");
 	setTimeout(function(){
-		$(".bounce").removeClass("bounce");
-	},500);
-}
-
-function popIt (popElement) {
-	$(popElement).addClass("pop");
-	setTimeout(function(){
-		$(".pop").removeClass("pop");
+		$(bounceElement).removeClass("bounce");
 	},500);
 }
 
