@@ -10,14 +10,23 @@ $(document).ready(function() {
 	//change avatar to aniumated gif
     setTimeout(function(){
 		$(".chat-profile").attr("src","images/smile.gif");
-	},1000);
+	},600);
+	
+	function RepeatGif(){
+		setTimeout(function repeatGif(){
+		$(".chat-profile").attr("src","images/smile.gif");
+		RepeatGif();
+	},15000);
+	}
+	
+	RepeatGif();
 	
 	//pop the text
 	setTimeout(function(){
 		$(".appear-2").css({"visibility":"visible"})
 		var popObject = $(".appear-2");
 		bounceIt (popObject);
-	},500);
+	},800);
 	
 }
 );
