@@ -42,10 +42,10 @@ Find out how Magento aligns with a wide range of business goals.
       </div>
 	  <div class="grid-x grid-padding-x grid-padding-y">
 		  <div class="large-6 large-offset-4 cell" style="height: 300px; position: relative;">
-			  <div class="bubble growth-bubble" style="padding-top: 45px; top:14%; left:38%"><span>Growth</span></div>
-			  <div class="bubble n-business-bubble" style="padding-top: 35px; top:42%; left:8%"><span>New<br>Business</span></div>
-		      <div class="bubble operations-bubble" style="padding-top: 45px; top:63%; left:48%"><span>Operations</span></div>
-		      <div class="bubble migration-bubble"  style="padding-top: 45px; top:33%; left:68%"><span>Migration</span></div>
+			  <div class="bubble growth-bubble" style="visibility: hidden; padding-top: 50px; top:14%; left:35%"><span>Growth</span></div>
+			  <div class="bubble n-business-bubble" style="visibility: hidden; padding-top: 35px; top:42%; left:8%"><span>New<br>Business</span></div>
+		      <div class="bubble operations-bubble" style="visibility: hidden; padding-top: 50px; top:63%; left:42%"><span>Operations</span></div>
+		      <div class="bubble migration-bubble"  style="visibility: hidden; padding-top: 50px; top:33%; left:68%"><span>Migration</span></div>
 		  </div>
 	  </div>
 		<br>
@@ -71,20 +71,64 @@ Find out how Magento aligns with a wide range of business goals.
     <script src="js/app.js"></script>
 	<script>
 		$(document).ready(function() {
+			//initiate bubbles
 			setTimeout(function(){
-				$(".growth-bubble").addClass("bloat")
+				$(".growth-bubble").css({"visibility":"visible"}).addClass("bloat")
 			},1200);
 		    setTimeout(function(){
-				$(".operations-bubble").addClass("bloat")
-			},2500);
+				$(".operations-bubble").css({"visibility":"visible"}).addClass("bloat")
+			},1500);
 			 setTimeout(function(){
-				$(".n-business-bubble").addClass("bloat")
-			},3000);
+				$(".n-business-bubble").css({"visibility":"visible"}).addClass("bloat")
+			},1800);
 			 setTimeout(function(){
-				$(".migration-bubble").addClass("bloat")
-			},4000)
+				$(".migration-bubble").css({"visibility":"visible"}).addClass("bloat")
+			},2200);
+			
+			//stop action on hover
+			
+			$(".bubble").mouseenter(function(){
+				$(this).removeClass("bloat");
+			});
+			$(".bubble").mouseleave(function(){
+				$(this).addClass("bloat");
+			});
 		}
 		);
 	</script>
+	<style>
+		.growth-bubble {
+			background-color: #7E69D5;
+			box-shadow: 0px 0px 0px 6px #E5E1F7; 
+		}
+		.growth-bubble:hover {
+			background-color: #7E69D5;
+			box-shadow: 0px 0px 0px 10px #E5E1F7; 
+		}
+		.operations-bubble {
+			background-color: #109BF1;
+			box-shadow: 0px 0px 0px 6px #E4F0F8;
+		}
+		.operations-bubble:hover {
+			background-color: #109BF1;
+			box-shadow: 0px 0px 0px 10px #E4F0F8;
+		}
+		.migration-bubble {
+			background-color: #0EB5BF;
+			box-shadow: 0px 0px 0px 6px #DEF1F2;
+		}
+		.migration-bubble:hover {
+			background-color: #0EB5BF;
+			box-shadow: 0px 0px 0px 10px #DEF1F2;
+		}
+		.n-business-bubble {
+			background-color: #12992E;
+			box-shadow: 0px 0px 0px 6px #DCF3E1;
+		}
+		.n-business-bubble:hover {
+			background-color: #12992E;
+			box-shadow: 0px 0px 0px 10px #DCF3E1;
+		}
+	</style>
   </body>
 </html>

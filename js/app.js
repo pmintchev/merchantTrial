@@ -10,13 +10,13 @@ $(document).ready(function() {
 	//change avatar to aniumated gif
     setTimeout(function(){
 		$(".chat-profile").attr("src","images/smile.gif");
-	},600);
+	},1600);
 	
 	function RepeatGif(){
 		setTimeout(function repeatGif(){
 		$(".chat-profile").attr("src","images/smile.gif");
 		RepeatGif();
-	},15000);
+	},10000);
 	}
 	
 	RepeatGif();

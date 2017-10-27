@@ -35,15 +35,10 @@
 	padding:30px 0px;
 	background-color: #F16321;
 	color: white;
-	box-shadow: 0px 0px 0px 4px #FCE7DD;
 	text-align: center;
 	font-weight: 600;
 	position: absolute;
 	cursor: pointer;
-}
-
-.bubble:hover {
-	box-shadow: 0px 0px 0px 8px #FCE7DD;
 }
 
 
