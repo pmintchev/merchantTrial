@@ -16,7 +16,7 @@ Error: File to import not found or unreadable: util/util.
 64: 	float:right;
 65: 	border-radius:100%;
 66: 	overflow:hidden;
-67: 	border:1px solid #D3D3D3;
+67: 	border:1px solid #6C6C6C;
 68: }
 
 Backtrace:
@@ -71,4 +71,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: util/util.\A        Load paths:\A          /Applications/Adobe Dreamweaver CC 2018/Configuration/SassFrameworks/bourbon\A          /Applications/Adobe Dreamweaver CC 2018/Configuration/SassFrameworks/neat\A          /Applications/Adobe Dreamweaver CC 2018/Configuration/SassFrameworks/base\A         on line 63 of /Users/pmintchev/Documents/prototypes/cloudmerchants/scss/_settings.scss\A         from line 3 of /Users/pmintchev/Documents/prototypes/cloudmerchants/scss/app.scss\A \A 58: .header {\A 59: 	border-bottom:1px solid #D2D2D2;\A 60: }\A 61: \A 62: .chat-profile {\A 63: 	display:block;\A 64: 	float:right;\A 65: 	border-radius:100%;\A 66: 	overflow:hidden;\A 67: 	border:1px solid #D3D3D3;\A 68: }"; }
+  content: "Error: File to import not found or unreadable: util/util.\A        Load paths:\A          /Applications/Adobe Dreamweaver CC 2018/Configuration/SassFrameworks/bourbon\A          /Applications/Adobe Dreamweaver CC 2018/Configuration/SassFrameworks/neat\A          /Applications/Adobe Dreamweaver CC 2018/Configuration/SassFrameworks/base\A         on line 63 of /Users/pmintchev/Documents/prototypes/cloudmerchants/scss/_settings.scss\A         from line 3 of /Users/pmintchev/Documents/prototypes/cloudmerchants/scss/app.scss\A \A 58: .header {\A 59: 	border-bottom:1px solid #D2D2D2;\A 60: }\A 61: \A 62: .chat-profile {\A 63: 	display:block;\A 64: 	float:right;\A 65: 	border-radius:100%;\A 66: 	overflow:hidden;\A 67: 	border:1px solid #6C6C6C;\A 68: }"; }
