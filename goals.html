@@ -7,6 +7,7 @@
     <title>Welcome to Magento</title>
     <link rel="stylesheet" href="css/app.css">
 	<link rel="stylesheet" href="css/additions.css">
+	 <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div class="header grid-container fluid">
@@ -25,7 +26,7 @@
 		  </div>
 	  </div>
       <div class="grid-x grid-padding-x">
-        <div class="small-2 large-offset-2 cell" style="text-align:right;">
+        <div class="small-2 large-offset-1 cell" style="text-align:right;">
           <img class="chat-profile bounce-in appear-1" src="images/static-bot.gif">
         </div>
         <div class="large-6 small-10 cell">
@@ -41,7 +42,7 @@ Find out how Magento aligns with a wide range of business goals.
         </div>
       </div>
 	  <div class="grid-x grid-padding-x grid-padding-y">
-		  <div class="large-6 large-offset-4 cell" style="height: 300px; position: relative;">
+		  <div class="large-6 large-offset-3 cell" style="height: 300px; position: relative;">
 			  <div class="bubble growth-bubble" style="visibility: hidden; padding-top: 50px; top:14%; left:35%"><span>Growth</span></div>
 			  <div class="bubble n-business-bubble" style="visibility: hidden; padding-top: 35px; top:42%; left:8%"><span>New<br>Business</span></div>
 		      <div class="bubble operations-bubble" style="visibility: hidden; padding-top: 50px; top:63%; left:42%"><span>Operations</span></div>
@@ -49,21 +50,27 @@ Find out how Magento aligns with a wide range of business goals.
 		  </div>
 	  </div>
 		<br>
-	  <div class="grid-x grid-padding-x grid-padding-y">
-		  <div class="large-8 large-offset-2 cell">
+	  <div class="grid-x grid-padding-x grid-padding-y page-actions-row">
+		  <div class="large-8 large-offset-1 cell">
 			  <a class="button cta-startStrategy" href="methods.html" style="float: right;">Continue</a>
 		  </div>
 	  </div>
-      <div class="grid-x grid-padding-x">
-        <div class="large-8 large-offset-2 small-12 cell">
-          <br>
-          <hr>
-          <div class="end-cta" style="text-align:center;">
-            <img src="images/cta-footer.png">
-          </div>
-        </div>
-      </div>
     </div>
+	  <div class="grid-container fluid footer" style="border-top:1px solid #D2D2D2">
+		  <div class="grid-container footer-actions">
+			  <div class="grid-x grid-padding-x grid-padding-y">
+				  <div class="large-4 cell footer-cta">
+					  <span class="icon-personal_video"></span>Schedule a Demo
+				  </div>
+				  <div class="large-4 cell footer-cta">
+					  <span class="icon-perm_phone_msg"></span> Contact a Magento Specialist
+				  </div>
+				  <div class="large-4 cell footer-cta">
+					  <span class="icon-build"></span> Start your Development Trial
+				  </div>
+		  	  </div>
+		  </div>
+	  </div>
 
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/what-input/dist/what-input.js"></script>
@@ -77,22 +84,15 @@ Find out how Magento aligns with a wide range of business goals.
 			},1200);
 		    setTimeout(function(){
 				$(".operations-bubble").css({"visibility":"visible"}).addClass("bloat")
-			},1500);
+			},1300);
 			 setTimeout(function(){
 				$(".n-business-bubble").css({"visibility":"visible"}).addClass("bloat")
-			},1800);
+			},1400);
 			 setTimeout(function(){
 				$(".migration-bubble").css({"visibility":"visible"}).addClass("bloat")
-			},2200);
+			},1600);
 			
-			//stop action on hover
 			
-			$(".bubble").mouseenter(function(){
-				$(this).removeClass("bloat");
-			});
-			$(".bubble").mouseleave(function(){
-				$(this).addClass("bloat");
-			});
 		}
 		);
 	</script>

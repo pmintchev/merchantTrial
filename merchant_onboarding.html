@@ -7,6 +7,7 @@
     <title>Welcome to Magento</title>
     <link rel="stylesheet" href="css/app.css">
 	<link rel="stylesheet" href="css/additions.css">
+	 <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div class="header grid-container fluid">
@@ -25,43 +26,100 @@
 		  </div>
 	  </div>
       <div class="grid-x grid-padding-x">
-        <div class="small-2 large-offset-2 cell" style="text-align:right;">
+        <div class="small-2 large-offset-1 cell" style="text-align:right;">
           <img class="chat-profile bounce-in appear-1" src="images/static-bot.gif">
         </div>
         <div class="large-6 small-10 cell">
           <div class="card dialogue bounce-in appear-2">
             <div class="card-section">
               <p>
-				  Hello Sally,<br>
-				  Welcome to your Magento Commerce Trial!<br>
-				  Magento is a highly customizable platform that allows u to build a solution custom to the needs of your business.<br>
-			  </p>
-			  <p>
-				  I will guide you through the best practice of successfully launching a Magento site.
+				  Hello Sally,<br>Welcome to your Magento Commerce trial.<br>You are about to get hands on experience to the world’s leading digital commerce platform.
 			  </p>
             </div>
-          </div>
-			<br>
-          <div class="dialogue dialogue-controls">
-            <a class="button cta-startStrategy" href="goals.html" style="float: right;">Let's Go</a>
           </div>
           <!-- This is the end of the conversation content-->
         </div>
       </div>
-      <div class="grid-x grid-padding-x">
-        <div class="large-8 large-offset-2 small-12 cell">
-          <br><br><br><br>
-          <hr>
-          <div class="end-cta" style="text-align:center;">
-            <img src="images/cta-footer.png">
-          </div>
-        </div>
-      </div>
+		<br>
+	  <div class="grid-x grid-padding-x grid-padding-y page-actions-row">
+		  <div class="large-8 large-offset-1 cell">
+			  <a class="button cta-startStrategy" href="goals.html" style="float: right;">Let's Go</a>
+		  </div>
+	  </div>
     </div>
+	  <div class="grid-container fluid footer" style="border-top:1px solid #D2D2D2">
+		  <div class="grid-container footer-actions">
+			  <div class="grid-x grid-padding-x grid-padding-y">
+				  <div class="large-4 cell footer-cta">
+					  <span class="icon-personal_video"></span>Schedule a Demo
+				  </div>
+				  <div class="large-4 cell footer-cta">
+					  <span class="icon-perm_phone_msg"></span> Contact a Magento Specialist
+				  </div>
+				  <div class="large-4 cell footer-cta">
+					  <span class="icon-build"></span> Start your Development Trial
+				  </div>
+		  	  </div>
+		  </div>
+	  </div>
 
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/what-input/dist/what-input.js"></script>
     <script src="bower_components/foundation-sites/dist/js/foundation.js"></script>
     <script src="js/app.js"></script>
+	<script>
+		$(document).ready(function() {
+			//initiate bubbles
+			setTimeout(function(){
+				$(".growth-bubble").css({"visibility":"visible"}).addClass("bloat")
+			},1200);
+		    setTimeout(function(){
+				$(".operations-bubble").css({"visibility":"visible"}).addClass("bloat")
+			},1300);
+			 setTimeout(function(){
+				$(".n-business-bubble").css({"visibility":"visible"}).addClass("bloat")
+			},1400);
+			 setTimeout(function(){
+				$(".migration-bubble").css({"visibility":"visible"}).addClass("bloat")
+			},1600);
+			
+			
+		}
+		);
+	</script>
+	<style>
+		.growth-bubble {
+			background-color: #7E69D5;
+			box-shadow: 0px 0px 0px 6px #E5E1F7; 
+		}
+		.growth-bubble:hover {
+			background-color: #7E69D5;
+			box-shadow: 0px 0px 0px 10px #E5E1F7; 
+		}
+		.operations-bubble {
+			background-color: #109BF1;
+			box-shadow: 0px 0px 0px 6px #E4F0F8;
+		}
+		.operations-bubble:hover {
+			background-color: #109BF1;
+			box-shadow: 0px 0px 0px 10px #E4F0F8;
+		}
+		.migration-bubble {
+			background-color: #0EB5BF;
+			box-shadow: 0px 0px 0px 6px #DEF1F2;
+		}
+		.migration-bubble:hover {
+			background-color: #0EB5BF;
+			box-shadow: 0px 0px 0px 10px #DEF1F2;
+		}
+		.n-business-bubble {
+			background-color: #12992E;
+			box-shadow: 0px 0px 0px 6px #DCF3E1;
+		}
+		.n-business-bubble:hover {
+			background-color: #12992E;
+			box-shadow: 0px 0px 0px 10px #DCF3E1;
+		}
+	</style>
   </body>
 </html>

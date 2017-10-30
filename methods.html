@@ -7,6 +7,7 @@
     <title>Welcome to Magento</title>
     <link rel="stylesheet" href="css/app.css">
 	<link rel="stylesheet" href="css/additions.css">
+	 <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div class="header grid-container fluid">
@@ -25,14 +26,15 @@
 		  </div>
 	  </div>
       <div class="grid-x grid-padding-x">
-        <div class="small-2 large-offset-2 cell" style="text-align:right;">
+        <div class="small-2 large-offset-1 cell" style="text-align:right;">
           <img class="chat-profile bounce-in appear-1" src="images/static-bot.gif">
         </div>
         <div class="large-6 small-10 cell">
           <div class="card dialogue bounce-in appear-2">
             <div class="card-section">
               <p>
-				  What areas of growth do you want to pursue? 
+				  Magento can be modified to match and scale to your business goals. 
+Find out how Magento aligns with a wide range of business goals.
 			  </p>
             </div>
           </div>
@@ -40,29 +42,36 @@
         </div>
       </div>
 	  <div class="grid-x grid-padding-x grid-padding-y">
-		  <div class="large-6 large-offset-4 cell" style="height: 300px; position: relative;">
-			  <div class="bubble growth-bubble" style="padding-top: 35px; top:14%; left:38%"><span>Social<br>Media</span></div>
-			  <div class="bubble n-business-bubble" style="padding-top: 35px; top:42%; left:8%"><span>Add B2B B2C B2D</span></div>
-		      <div class="bubble operations-bubble" style="padding-top: 35px; top:63%; left:48%"><span>Manage all Channels</span></div>
-		      <div class="bubble migration-bubble"  style="padding-top: 35px; top:33%; left:68%"><span>Expand Customer Base</span></div>
+		  <div class="large-6 large-offset-3 cell" style="height: 300px; position: relative;">
+			  <div class="bubble growth-bubble" style="visibility: hidden; padding-top: 50px; top:14%; left:35%"><span>How To</span></div>
+			  <div class="bubble n-business-bubble" style="visibility: hidden; padding-top: 35px; top:42%; left:8%"><span>How To</span></div>
+		      <div class="bubble operations-bubble" style="visibility: hidden; padding-top: 50px; top:63%; left:42%"><span>How To</span></div>
+		      <div class="bubble migration-bubble"  style="visibility: hidden; padding-top: 50px; top:33%; left:68%"><span>How To</span></div>
 		  </div>
 	  </div>
 		<br>
-	  <div class="grid-x grid-padding-x grid-padding-y">
-		  <div class="large-8 large-offset-2 cell">
-			  <a class="button cta-startStrategy" style="float: right;">Continue</a>
+	  <div class="grid-x grid-padding-x grid-padding-y page-actions-row">
+		  <div class="large-8 large-offset-1 cell">
+			  <a class="button cta-startStrategy" href="index.html" style="float: right;">Show me my Project Strategy</a>
+			  <a class="clear button secondary cta-startStrategy" href="methods.html" style="float: right;">Start my Technical Trial</a>
 		  </div>
 	  </div>
-      <div class="grid-x grid-padding-x">
-        <div class="large-8 large-offset-2 small-12 cell">
-          <br>
-          <hr>
-          <div class="end-cta" style="text-align:center;">
-            <img src="images/cta-footer.png">
-          </div>
-        </div>
-      </div>
     </div>
+	  <div class="grid-container fluid footer" style="border-top:1px solid #D2D2D2">
+		  <div class="grid-container footer-actions">
+			  <div class="grid-x grid-padding-x grid-padding-y">
+				  <div class="large-4 cell footer-cta">
+					  <span class="icon-personal_video"></span>Schedule a Demo
+				  </div>
+				  <div class="large-4 cell footer-cta">
+					  <span class="icon-perm_phone_msg"></span> Contact a Magento Specialist
+				  </div>
+				  <div class="large-4 cell footer-cta">
+					  <span class="icon-build"></span> Start your Development Trial
+				  </div>
+		  	  </div>
+		  </div>
+	  </div>
 
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/what-input/dist/what-input.js"></script>
@@ -70,20 +79,57 @@
     <script src="js/app.js"></script>
 	<script>
 		$(document).ready(function() {
+			//initiate bubbles
 			setTimeout(function(){
-				$(".growth-bubble").addClass("bloat")
+				$(".growth-bubble").css({"visibility":"visible"}).addClass("bloat")
 			},1200);
 		    setTimeout(function(){
-				$(".operations-bubble").addClass("bloat")
-			},2500);
+				$(".operations-bubble").css({"visibility":"visible"}).addClass("bloat")
+			},1300);
 			 setTimeout(function(){
-				$(".n-business-bubble").addClass("bloat")
-			},3000);
+				$(".n-business-bubble").css({"visibility":"visible"}).addClass("bloat")
+			},1400);
 			 setTimeout(function(){
-				$(".migration-bubble").addClass("bloat")
-			},4000)
+				$(".migration-bubble").css({"visibility":"visible"}).addClass("bloat")
+			},1600);
+			
+			
 		}
 		);
 	</script>
+	<style>
+		.growth-bubble {
+			background-color: #7E69D5;
+			box-shadow: 0px 0px 0px 6px #E5E1F7; 
+		}
+		.growth-bubble:hover {
+			background-color: #7E69D5;
+			box-shadow: 0px 0px 0px 10px #E5E1F7; 
+		}
+		.operations-bubble {
+			background-color: #109BF1;
+			box-shadow: 0px 0px 0px 6px #E4F0F8;
+		}
+		.operations-bubble:hover {
+			background-color: #109BF1;
+			box-shadow: 0px 0px 0px 10px #E4F0F8;
+		}
+		.migration-bubble {
+			background-color: #0EB5BF;
+			box-shadow: 0px 0px 0px 6px #DEF1F2;
+		}
+		.migration-bubble:hover {
+			background-color: #0EB5BF;
+			box-shadow: 0px 0px 0px 10px #DEF1F2;
+		}
+		.n-business-bubble {
+			background-color: #12992E;
+			box-shadow: 0px 0px 0px 6px #DCF3E1;
+		}
+		.n-business-bubble:hover {
+			background-color: #12992E;
+			box-shadow: 0px 0px 0px 10px #DCF3E1;
+		}
+	</style>
   </body>
 </html>

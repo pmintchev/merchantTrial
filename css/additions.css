@@ -2,6 +2,11 @@
 /* CSS Document */
 /* additional settings................. */
 
+.button.secondary, .button.secondary:hover {
+	color:white;
+}
+
+
 .header {
 	border-bottom:1px solid #D2D2D2;
 }
@@ -39,6 +44,55 @@
 	font-weight: 600;
 	position: absolute;
 	cursor: pointer;
+}
+
+/*Page Actions*/
+
+.page-actions-row {
+	padding-top: 50px;
+	padding-bottom: 180px;
+}
+
+/*Footer CTAs*/
+
+.footer {
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	padding-top: 15px;
+	padding-bottom: 5px;
+	background-color: white;
+}
+
+.footer-cta span {
+	font-size: 15px;
+	font-weight: 600;
+	color: #7A7A7C;
+	padding: 0px;
+	margin-top: 12px;
+	cursor: pointer;
+}
+
+.footer-cta:hover {
+	text-decoration:underline;
+	
+}
+
+
+.footer-cta span[class*="icon"] {
+	display: block;
+	float: left;
+	height: 45px;
+	width: 45px;
+	padding: 10px 11px;
+	background-color: #26A2AA;
+	font-size: 24px;
+	color: white;
+	margin-right: 16px;
+	border-radius: 100%;
+	text-align: center;
+	margin-top: -12px;
+	font-weight: normal;
 }
 
 
