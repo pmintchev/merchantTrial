@@ -28,11 +28,32 @@ $(document).ready(function() {
 		bounceIt (popObject);
 	},800);
 	
+	//show content
+	
+	$(".bubble").click(function(){
+		//show checkmark
+		$(this).find('.checkmark').css({"visibility":"visible"});
+		
+		//get content for bubble
+		var bubbleID = $(this).attr('bubbleID');
+		var solutionContent = $("." + bubbleID).html();
+		$(".chat-bubble").html(solutionContent).addClass('drop-down');
+		setTimeout(function(){
+		$(".chat-bubble").removeClass("drop-down");
+		},500);
+		
+	});
+	
+	$(".checkmark").click(function(e){
+		e.stopPropagation();
+		$(this).css({"visibility":"hidden"});
+		//var solutionContent = $(".default-solution").html();
+		//$(".chat-bubble").html(solutionContent);
+	});
 }
 );
 
 //functions
-
 
 
 

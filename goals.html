@@ -21,8 +21,9 @@
     </div>
     <div class="grid-container">
       <div class="grid-x grid-padding-x">
-		  <div class="large-10 clearfix cell">
-			  <a class="clear button secondary float-right">Skip</a>
+		  <div class="large-6 large-offset-3 clearfix cell page-controls">
+			  <a class="float-right">Skip</a>
+			  <a class="float-left">Back</a>
 		  </div>
 	  </div>
       <div class="grid-x grid-padding-x">
@@ -30,7 +31,7 @@
           <img class="chat-profile bounce-in appear-1" src="images/static-bot.gif">
         </div>
         <div class="large-6 small-10 cell">
-          <div class="card dialogue bounce-in appear-2">
+          <div class="card dialogue bounce-in appear-2 chat-bubble">
             <div class="card-section">
               <p>
 				  Magento can be modified to match and scale to your business goals. 
@@ -38,15 +39,51 @@ Find out how Magento aligns with a wide range of business goals.
 			  </p>
             </div>
           </div>
+		 <!--Begin dynamic bubble content-->
+			<div class="card dialogue default-solution">
+            <div class="card-section">
+              <p>Magento can be modified to match and scale to your business goals. Find out how Magento aligns with a wide range of business goals.</p>
+            </div>
+          </div>
+		  <div class="card dialogue growth-solution">
+            <div class="card-section">
+			  <h4>Why Magento is build for Growth:</h4>
+              <p>Unlimited flexibility and customizability with an open platform code and available or custom extensions.</p>
+			  <p>Futureproof functionalities with options to support multiple storefronts, languages, currencies</p>
+			  <p>Built-in analytics and reporting to measure and prepare for growth</p>
+            </div>
+          </div>
+		  <div class="card dialogue n-business-solution">
+            <div class="card-section">
+			  <h4>Why New Business with Magento:</h4>
+              <p>Unlimited flexibility and customizability with an open platform code and available or custom extensions.</p>
+            </div>
+          </div>
+		  <div class="card dialogue operations-solution">
+            <div class="card-section">
+			  <h4>Reduce Operation Cost with Magento:</h4>
+			  <p>Futureproof functionalities with options to support multiple storefronts, languages, currencies</p>
+			  <p>Built-in analytics and reporting to measure and prepare for growth</p>
+            </div>
+          </div>
+		  <div class="card dialogue migration-solution">
+            <div class="card-section">
+			  <h4>Platform Migration:</h4>
+              <p>Unlimited flexibility and customizability with an open platform code and available or custom extensions.</p>
+			  <p>Futureproof functionalities with options to support multiple storefronts, languages, currencies</p>
+			  <p>Built-in analytics and reporting to measure and prepare for growth</p>
+			  <p>Built-in analytics and reporting to measure and prepare for growth</p>
+            </div>
+          </div>
           <!-- This is the end of the conversation content-->
         </div>
       </div>
 	  <div class="grid-x grid-padding-x grid-padding-y">
 		  <div class="large-6 large-offset-3 cell" style="height: 300px; position: relative;">
-			  <div class="bubble growth-bubble" style="visibility: hidden; padding-top: 50px; top:14%; left:35%"><span>Growth</span></div>
-			  <div class="bubble n-business-bubble" style="visibility: hidden; padding-top: 35px; top:42%; left:8%"><span>New<br>Business</span></div>
-		      <div class="bubble operations-bubble" style="visibility: hidden; padding-top: 50px; top:63%; left:42%"><span>Operations</span></div>
-		      <div class="bubble migration-bubble"  style="visibility: hidden; padding-top: 50px; top:33%; left:68%"><span>Migration</span></div>
+			  <div class="bubble growth-bubble" style="visibility: hidden; top:10%; left:30%" bubbleID="growth-solution"><div class="checkmark icon-check"></div><span class="icon-public float-center"></span><span>Business Growth</span></div>
+			  <div class="bubble n-business-bubble" style="visibility: hidden; top:42%; left:0%" bubbleID="n-business-solution"><div class="checkmark icon-check"></div><span class="icon-lightbulb_outline float-center"></span><span>Start a New Business</span></div>
+		      <div class="bubble operations-bubble" style="visibility: hidden; top:63%; left:42%" bubbleID="operations-solution"><div class="checkmark icon-check"></div><span class="icon-local_shipping float-center"></span><span>Reduce Operation Costs</span></div>
+		      <div class="bubble migration-bubble"  style="visibility: hidden; top:33%; left:68%" bubbleID="migration-solution"><div class="checkmark icon-check"></div><span class="icon-settings float-center"></span><span>Platform Migration</span></div>
 		  </div>
 	  </div>
 		<br>
@@ -80,18 +117,17 @@ Find out how Magento aligns with a wide range of business goals.
 		$(document).ready(function() {
 			//initiate bubbles
 			setTimeout(function(){
-				$(".growth-bubble").css({"visibility":"visible"}).addClass("bloat")
+				$(".growth-bubble").css({"visibility":"visible"}).addClass("bounce")
 			},1200);
 		    setTimeout(function(){
-				$(".operations-bubble").css({"visibility":"visible"}).addClass("bloat")
+				$(".operations-bubble").css({"visibility":"visible"}).addClass("bounce")
 			},1300);
 			 setTimeout(function(){
-				$(".n-business-bubble").css({"visibility":"visible"}).addClass("bloat")
+				$(".n-business-bubble").css({"visibility":"visible"}).addClass("bounce")
 			},1400);
 			 setTimeout(function(){
-				$(".migration-bubble").css({"visibility":"visible"}).addClass("bloat")
+				$(".migration-bubble").css({"visibility":"visible"}).addClass("bounce")
 			},1600);
-			
 			
 		}
 		);
@@ -105,6 +141,11 @@ Find out how Magento aligns with a wide range of business goals.
 			background-color: #7E69D5;
 			box-shadow: 0px 0px 0px 10px #E5E1F7; 
 		}
+		
+		.growth-bubble .checkmark {
+			color:#7E69D5;
+			border-color: #7E69D5;
+		}
 		.operations-bubble {
 			background-color: #109BF1;
 			box-shadow: 0px 0px 0px 6px #E4F0F8;
@@ -112,6 +153,11 @@ Find out how Magento aligns with a wide range of business goals.
 		.operations-bubble:hover {
 			background-color: #109BF1;
 			box-shadow: 0px 0px 0px 10px #E4F0F8;
+		}
+		
+		.operations-bubble .checkmark {
+			color:#109BF1;
+			border-color: #109BF1;
 		}
 		.migration-bubble {
 			background-color: #0EB5BF;
@@ -121,6 +167,12 @@ Find out how Magento aligns with a wide range of business goals.
 			background-color: #0EB5BF;
 			box-shadow: 0px 0px 0px 10px #DEF1F2;
 		}
+		
+		.migration-bubble .checkmark {
+			color:#0EB5BF;
+			border-color: #0EB5BF;
+		}
+		
 		.n-business-bubble {
 			background-color: #12992E;
 			box-shadow: 0px 0px 0px 6px #DCF3E1;
@@ -128,6 +180,11 @@ Find out how Magento aligns with a wide range of business goals.
 		.n-business-bubble:hover {
 			background-color: #12992E;
 			box-shadow: 0px 0px 0px 10px #DCF3E1;
+		}
+		
+		.n-business-bubble .checkmark {
+			color:#12992E;
+			border-color: #12992E;
 		}
 	</style>
   </body>
